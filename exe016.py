@@ -1,9 +1,11 @@
-#desafio12
-print ('='*60)
-print('       PROMOÇÃO - 5% DE DESCONTO EM QUALQUER PRODUTO')
-print('='*60)
+# O PRODUTO DE UMA SEQUÊNCIA NUMÉRICA
 
-
-p = float(input('Qual o preço do produto: R$ '))
-d = p-(p*0.05)
-print('O preço do produto com desconto é R${:.2F}.'.format(d))
+print('Digite uma sequência numérica terminada em 0.')
+i = 1
+produto = 1
+while i != 0:
+    valor = int(input('Digite o número que será multiplicado: '))
+    if valor != 0:
+        produto = produto * valor
+    else:
+        print('O produto da sequência dada é {}'.format(produto))

@@ -1,10 +1,33 @@
-#desafio026
+# SEMANA 5 - Exercício 2 - Primos
+def maior_primo(k):
+    ii = 1
+    iii = k
+    d = 0
+    l = k
+    chave = 0
+    while l >= 0:
 
-frase = str(input('Digite uma frase: ')).strip()
-frasee = frase.lower()
-n = len(frasee)
-print('Nessa frase temos {} vezes a letra a.'.format(frasee.count("a")))
-print('A primeira letra a se localiza na posição :',frasee.find('a')+1)
-print('A última letra "a" está na posição: ', frasee.rfind('a')+1)
-#solucionei com os exercícios
+        while ii <= iii:
+            if iii % ii == 0:
+                ii = ii + 1
+                d = d + 1
+            else:
+                ii = ii + 1
 
+        if d == 2:
+            chave = iii
+            l = 0
+
+        ii = 1
+        iii = iii - 1
+        l = l - 1
+        d = 0
+
+    return chave
+
+
+n = int(input('Digite um número inteiro: '))
+if n >=2:
+    print(maior_primo(n))
+else:
+    print('Número Inválido! ')

@@ -1,13 +1,15 @@
-print('=='*20)
-print('      Aluguel de Carros')
-print('=='*20)
+# Sequência Decrescente
+decrescente = True
+anterior = int(input('Digite o primeiro número da sequência: '))
+valor = 1
 
-dias = float(input('Quantidade de Dias Alugados: '))
-km =  float(input('Quantidade de km Rodados:'))
-vldias = dias*60
-vlkm = km*0.15
+while valor != 0 and decrescente:
+    valor = int(input('Digite o próximo número da sequência: '))
+    if valor > anterior:
+        decrescente = False
+    anterior = valor
 
-print('O valor aluguel do carro por {:.0f} dias é R${:.2f}.'.format(dias,vldias))
-print('O valor referente a {:.2f}km rodados é R${:.2f}.'.format(km,vlkm))
-print('Total a Pagar: R${:.2f}'.format(vlkm+vldias))
-
+if decrescente:
+    print('A sequência está em ordem decrescente!')
+else:
+    print('A sequência não está em ordem decrescente!')

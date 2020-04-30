@@ -1,11 +1,10 @@
-#defsafio011
-print('='*50)
-print ('               Pintando uma Parede')
-print('='*50)
+#Variante Sequência de Soma de Números
 
-m = float(input('Medida da Altura da Parede em Metros: '))
-l = float(input('Medida da Largura da Parede em Metros: '))
-m2 = m*l
-t = m2/2
-print ('Sua parede tem {:.2f} metros quadrados.'.format(m2))
-print ('Você precisa de {:.2f} litros de tinta para pintar a sua parede.'.format(t))
+n = int(input('Quantos números terá sua sequência de somas?'))
+i = 1
+soma = 0
+while i <= n:
+    num = int(input('Digite o {}º número a ser somado: '.format(i)))
+    soma = soma + num
+    i = i + 1
+print('A soma final dos valores é {}'.format(soma))

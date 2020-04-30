@@ -1,16 +1,14 @@
-#desafio019
+#Números ímpares Com While
 
-#import random <random.choice()>
-from random import choice
-print('='*25)
-print ('   Sorteio dos Alunos')
-print('='*25)
+n = int(input('Digite o valor de n: '))
+i = n*2
+ii = 0
+while i != 0:
+    if ii % 2 == 1:
+        print(ii)
+        ii = ii + 1
+        i = i - 1
+    else:
+        i = i - 1
+        ii = ii + 1
 
-a1 = input('Nome do 1º aluno:')
-a2 = input('Nome do 2º aluno:')
-a3 = input('Nome do 3º aluno:')
-a4 = input('Nome do 4º aluno:')
-t = (a1,a2,a3,a4)
-s = choice(t)
-
-print ('O aluno sorteado para limpar o quadro será {}.'.format(s))

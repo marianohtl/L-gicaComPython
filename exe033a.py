@@ -1,7 +1,29 @@
-#desafio027
+#Teste Automatizado - Exercício 3 - Vogais - Semana 5
 
-n = str(input('Digite seu nome completo: ')).strip()# elimina espaços
-nome = n.split() #lista
-print('Muito prazer em te conhecer!')
-print('Seu primeiro nome é {}'. format(nome[0]))
-print('Seu último nome é {}'.format(nome[len(nome)-1]))# tamanho da lista - 1,2,3,4... -1, pois a posição de contagem começa do 0
+import random
+from random import randint
+
+#Sorteando Letras
+def test_vogal():
+    lista = ['q','w','e','r','t','y','u','i','o','p','a','s','d','f','g','h','j','k','l','ç','z','x','c','v','b','n','m']
+    n = randint(0,22)
+    v = lista[n]
+    return v
+
+#Verificador de Vogais
+def vogal(x):
+    y = 4
+    while y != -1:
+        lista = ['A','E','I','O','U']
+        r = z in lista[y]
+        if r == True:
+            y = -1
+        else:
+            y = y - 1
+    return r
+
+
+z = test_vogal()
+z = z.upper()
+print('Letra Sorteada:',z)
+print(vogal(z))

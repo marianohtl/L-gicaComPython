@@ -1,17 +1,12 @@
-#Desafio022
+# SEMANA 5 - Exercício 1 - Máximo
 
-nome = input('Digite seu nome completo: ')
-print('Seu Nome Maiúsculo: {}'.format(nome.upper()))
-print('Seu Nome Minúsculo: {}'.format(nome.lower()))
-n = nome.split()
-print('A Quantidade de Letras do Seu Nome: {}'.format(len(''.join(n))))#**
-print('A quantidade de letras do seu 1º nome: {}'.format(len(n[0])))#**
+def máximo (x , y):
+    if x > y:
+        m = x
+    else:
+        m = y
+    return m
 
-
-
-#1º solução
-#n2 = ''.join(n)
-#n3 = (n[0])
-#print('A quantidade de letras do seu nome: {}'.format(len(n2)))
-#print('A quantidade de letras do seu 1º nome: {}'.format(len(n3)))
-# implementação 2º Solução**
+n = int(input('Digite um número: '))
+nn = int(input('Digite o segundo número: '))
+print(máximo(n,nn))

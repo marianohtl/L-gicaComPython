@@ -1,9 +1,14 @@
-#Desafio034
+# Exercício 1 - UM QUADRADO PREENCHIDO COM #  - Semana 7
 
-s = float(input('Digite o valor do salário do funcionário: R$ '))
-if s > 1250.00:
-    a = s*1.1
-    print('Você ganhou um aumento de 10%, seu salário atual é {:.2f}.'.format(a))
-else:
-    a=s*1.15
-    print('Você ganhou um aumento de 15%, seu salário atual é {:.2f}.'.format(a))
+l = int(input('digite a largura: '))
+a = int(input('digite a altura: '))
+
+
+ii = 1
+while ii <= a:
+    i = 1
+    while i <= l:
+        print('#', end='')
+        i = i + 1
+    print()
+    ii = ii + 1

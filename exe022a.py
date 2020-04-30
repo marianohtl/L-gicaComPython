@@ -1,15 +1,22 @@
-"""co = float(input('Comprimento do cateto oposto: '))
-ca = float(input('Comprimento do cateto adjacente: '))
-hi = (co ** 2 + ca ** 2) **(1/2)
-print('A hipotenusa vaimedir {:.2f}.'.format(hi))"""""
+#Números Adjacentes Iguais
+sequência = input('Digite uma Sequência Numérica: ')
+
+length = len(sequência)
+i = 0
+n2 = 0
+determinante = 0
+while length != 0:
+    length = length - 1
+    n1 = sequência[i]
+    i = i + 1
+    if n1 == n2:
+        determinante = 1
+        n2 = n1
+    else:
+        n2 = n1
 
 
-
-#import math
-from math import hypot
-
-co = float(input('Comprimento do cateto oposto: '))
-ca = float(input('Comprimento do cateto adjacente: '))
-hi = hypot(ca,co)  # import math <math.hypot>
-print('A hipotenusa vai medir {:.2f}'.format(hi))
-
+if determinante == 1:
+    print('sim')
+else:
+    print('não')

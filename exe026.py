@@ -1,14 +1,20 @@
-'''import pygame
-pygame.mixer.init() #*
-pygame.mixer.music.load('exe026.mp3') #exe026.mp3 - PASTE
-pygame.mixer.music.play()
-input() #*
+# Identificador de Números Pares / Ímpares
 
-#*comandos não correspondem a aula original'''
+n = int(input('Digite um número inteiro: '))
+i = n
+ii = 1
+d = 0
 
-import pygame
-pygame.mixer.init() # acréscimo ao código original
-pygame.init()
-pygame.mixer.music.load('exe026.mp3')
-pygame.mixer.music.play()
-pygame.event.wait()
+while i != 0:
+    if n % ii == 0:
+        d = d + 1
+        ii = ii + 1
+        i = i - 1
+    else:
+        ii = ii + 1
+        i = i - 1
+
+if d == 2:
+    print('primo')
+else:
+    print('não primo')

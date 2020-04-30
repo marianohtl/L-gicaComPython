@@ -1,13 +1,21 @@
-#desafio027
+# Semana 5 - Exercício 3 - Vogais
 
-print('Olá, eu sou o Computador!')  # não posso usar método
-nome = input('Qual é o seu nome completo? ')
-lista = nome.split()
-lista2 = lista[::-1]
-print('Prazer em te conhecer, {} {}!'.format(lista[0],lista2[0]))
+def vogal(x):
+    y = 4
+    while y != -1:
+        lista = ['A','E','I','O','U']
+        r = lista[y] in v1
+        if r == True:
+            y = -1
+        else:
+            y = y - 1
+    return r
 
+v = input('Digite uma Vogal: ')
+r = v.isalpha()
 
-
-nome = str(input('Qual o seu nome completo? ')).split() # posso usar método graças a str
-nomee = nome[::-1]
-print('Prazer em te conhecer, {} {} !'.format(nome[0],nomee[0]))
+if r == True:
+    v1 = v[0].upper()
+    print(vogal(v1))
+else:
+    print('Não estamos trabalhando com uma vogal!')

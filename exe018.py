@@ -1,10 +1,13 @@
-print(' =='*30)
-print('                                      LOJA DO ABREU')
-print(' =='*30)
-print('  10% de desconto nos Pagamentos à Vista ')
-print('  8% de Juros à Prazo')
-print(' --'*30)
-preço = float(input(' Preço do Produto: R$'))
-vista = preço-(preço*0.1)
-prazo = preço+(preço*0.08)
-print(' À vista R${:.2f}\n À prazo R${:.2f}'.format(vista,prazo))
+# Soma da Sequência dos Componentes de um Número
+n = input('Digite um número: ')
+c = int(len(n))
+i = 0
+ii = 0
+soma = 0
+while i < c:
+    num = int(n[ii])
+    soma = soma + num
+    i = i + 1
+    ii = ii + 1
+
+print('A soma dos algarismos é {}.'.format(soma))

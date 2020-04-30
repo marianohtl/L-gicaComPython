@@ -1,12 +1,20 @@
-#Desafio022 - Aula
+# Teste Automatizado da Função MÁXIMO
+from random import randint
 
-nome = str(input('Digite seu nome completo: ')).strip() #usando a função .strip (espaços antes e depois erradicados)
-print('Analizando seu nome ...')
-print('Seu nome em maiúsulas é {}'.format(nome.upper()))
-print('Seu nome me minúsculas é {}'.format(nome.lower()))
-print('Seu nome tem ao todo {} letras'.format(len(nome) - nome.count(' ')))  # MUITO LEGAL >> - QUANTIDADE DE ESPAÇOS EM BRANCO
-print('Seu primeiro nome tem {} letras'.format(nome.find(' ')))#vai dar a posição do primeiro espaço <0 , 1 , 2 , 3 > -Quantidade de Letras-
+def test_one ():
+    n = randint(-1000,1000)
 
-# outra maneira
-# separa = nome.split
-# print('Seu primeiro nome é {} e ele tem {} letras.'.format(separa[0], len(separa[0])))
+    return (n)
+
+
+def máximo (x,y):
+    if x > y:
+        m = x
+    else:
+        m = y
+    return m
+
+n = test_one()
+nn = test_one()
+print('entre {} e {}'.format(n,nn))
+print('maior == ',máximo(n,nn))

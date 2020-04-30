@@ -1,15 +1,23 @@
-# Desafio.028
+# SEMANA 5 - Exercício 2 - Máximo com 3 parâmetros
 
-print('-'*30)
-print('      Jogo da Adivinhação')
-print('-'*30)
 
-import random
-n = random.randint(0,5)
-u = int(input(' De 0 a 5, adivinhe que número estou pensando...\n >>> '))
-if u == n:
-    print(' O número que pensei foi {}.'.format(n))
-    print(' Você Venceu! Grrr')
-else:
-    print(' O número que pensei foi {}.'.format(n))
-    print(' Você Perdeu! HaHaHa')
+def maximo(x,y,z):
+    if x == y == z:
+        m = x
+    if x > y:
+        if x > z:
+            m = x
+        else:
+            m = z
+    if y > x:
+        if y > z:
+            m = y
+        else:
+            m = z
+    return m
+
+maximo(30,14,10)
+maximo(0,-1,1)
+
+
+

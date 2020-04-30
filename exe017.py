@@ -1,9 +1,13 @@
+# O PRODUTO DE UM SEQUÊNCIA NUMÉRICA VARIAÇÃO
 
-print('='*60)
-print('                      Aumento Salarial')
-print('='*60)
+tamanho = int(input('Digite o tamanho da sequência de números: '))
 
-s = float(input('Salário Atual: R$ '))
-ns = s+(s*0.15)
-print('Salário com Aumento: R$ {:.2f}'.format(ns))
+produto = 1
+i = 0
 
+while i < tamanho:
+    valor = int(input('Digite um valor a ser multiplicado: '))
+    produto = produto * valor
+    i = i + 1
+
+print('O produto dos valores digitados é: {}.'.format(produto))

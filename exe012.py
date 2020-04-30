@@ -1,8 +1,20 @@
-#desafio008
+#Fórmula de Bhaskara
 
-
-m = float(input('Diga a medida em metro(s): '))
-cm = m*100
-ml = m*1000
-print('{} metro(s) tem {:.0f} centímetro(s) e {:.0f} milímetro(s).'.format(m,cm,ml))
-
+from math import sqrt
+a = int(input('Digite o valor de a: '))
+b = int(input('Digite o valor de b: '))
+c = int(input('Digite o valor de c: '))
+delta = b**2-4*a*c
+if delta == 0:
+    x = (-b + sqrt(delta)) / (2 * a)
+    print('a raiz desta equação é {}'.format(x))
+else:
+    if delta < 0:
+        print('esta equação não possui raízes reais')
+    else:
+        x = (-b + sqrt(delta)) / (2 * a)
+        y = (-b - sqrt(delta)) / (2 * a)
+        if x < y:
+            print('as raízes da equação são {} e {}'.format(x,y))
+        else:
+            print('as raízes da equação são {} e {}'.format(y,x))

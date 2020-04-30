@@ -1,7 +1,15 @@
-#Desafio.030
+# Desenhando um Quadrado
 
-n = int(input('Digite um número qualquer: '))
-if n%2 == 1:
-    print('{} é um número ímpar!'.format(n))
-else:
-    print('{} é um número par!'.format(n))
+altura = 5
+linha = 1
+while linha <= altura:
+    print('*', end='')
+    coluna = 2
+    while coluna < altura:
+        if linha == 1 or linha == altura:
+            print('*',end='')
+        else:
+            print(end = ' ')
+        coluna = coluna + 1
+    print('*')
+    linha = linha + 1

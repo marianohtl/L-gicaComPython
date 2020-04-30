@@ -1,5 +1,8 @@
-nome = input ("Digite seu nome: ")
-print ("É um prazer te conhecer,",nome,"!")
+#Impressão de fatura
 
-nome2 = input("Digite seu nome: ")
-print ("É um prazer te conhecer, {}!".format(nome2))
+nome = input('Digite o nome do cliente: ')
+dia_vencimento = input('Digite o dia de vencimento: ')
+mes_vencimento = input('Digite o mês de vencimento: ')
+valor_fatura = input('Digite o valor da fatura: ')
+print('Olá, {}'.format(nome))
+print('A sua fatura com vencimento em {} de {} no valor de R$ {} está fechada.'.format(dia_vencimento,mes_vencimento,valor_fatura))

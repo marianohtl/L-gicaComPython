@@ -1,36 +1,21 @@
-# Aula 10
+#Semana 5 - Exercício 1 - FizzBuzz
 
-# ESTRUTURA CONDICIONAL SIMPLES
-nome = str(input('Qual é o seu nome? '))
-if nome == 'Gustavo':
-    print('Que nome lindo você tem!')
-print('Bom dia, {}!\n'.format(nome))
+def fizzbuzz(x):
+    if x%3 == 0 and x%5 == 0:
+        return 'FizzBuzz'
+    elif x%5 == 0:
+        return 'Buzz'
+    elif x%3 == 0:
+        return 'Fizz'
+    else:
+        return x
 
-#Estrutura CONDICIONAL COMPOSTA
+print(fizzbuzz(101))
 
-nome = str(input('Qual é o seu nome mesmo? '))
-if nome == 'Gustavo':
-    print('Que nome lindo!')
-else:
-    print('Seu nome é tão normal!')
-print('Bom dia, {}!\n'.format(nome))
+print(fizzbuzz(3))
 
+print(fizzbuzz(5))
 
-'''
-n1 = float(input('Digite a primeira nota: '))
-n2 = float(input('Digite a segunda nota: '))
-m = (n1+n2)/2
-print('Sua média foi {:.1f}'.format(m))
-if m >= 6.8:
-    print('Sua média foi boa! PARABÉNS!')
-else:
-    print('Sua média foi ruim! ESTUDE MAIS!')'''
+print(fizzbuzz(15))
 
-
-#CONDIÇÃO SIMPLIFICADA
-
-n1 = float(input('Digite a primeira nota: '))
-n2 = float(input('Digite a segunda nota: '))
-m = (n1 + n2)/2
-print('Sua média foi {}'.format(m))
-print('PARABÉNS!' if m>=6 else "Estude Mais!")
+print(fizzbuzz(4))

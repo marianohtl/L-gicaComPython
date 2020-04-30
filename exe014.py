@@ -1,8 +1,10 @@
-#desafio010
-print('-'*50)
-print('                Convertendo Reais')
-print('-'*50)
+# Laço White e Soma de Sequência Numérica
 
-r = float(input('Digite quantos reais você tem na carteira: R$'))
-d = r/3.27
-print('Executando a conversão, significa que você tem US${:.2f}.'.format(d))
+print('Digite um sequência de valores terminada por zero.')
+valor = 1
+soma = 0
+while valor != 0:
+    valor = int(input('Digite um valor a ser somado: '))
+    soma = soma + valor
+
+print('A soma dos valores digitados é: {}'.format(soma))
