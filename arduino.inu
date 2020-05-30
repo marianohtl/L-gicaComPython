@@ -1,0 +1,40 @@
+double cholas = 0;
+int j = 0;
+
+void setup()
+{
+  pinMode(2, OUTPUT);
+  pinMode(3, OUTPUT);
+  pinMode(4, OUTPUT);
+  pinMode(5, OUTPUT);
+  pinMode(7, OUTPUT);
+  pinMode(8, OUTPUT);
+  pinMode(9, OUTPUT);
+  pinMode(10, OUTPUT);
+  pinMode(11, OUTPUT);
+}
+
+void loop()
+{
+  cholas = analogRead(A0);
+  for (int i=11; i>1; i--)
+  {
+    if (i < 6)
+    {
+      j = 1;
+    }
+    else
+    {
+      j = 0;
+    }
+    if (cholas >= 93.09 * (12 - i - j))
+      {
+        digitalWrite(i, HIGH);
+      }
+
+    else
+    {
+      digitalWrite(i, LOW);
+    }
+  }
+}
